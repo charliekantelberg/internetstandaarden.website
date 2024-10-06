@@ -110,6 +110,10 @@ nav img {
   body {
     background-color: black;
     color: white;
+    
+  }
+  section h2{
+    color: white;
   }
 }
 /* media query kan je verschillende stijlen toeppasen vd eigenschappen van het apparaat
