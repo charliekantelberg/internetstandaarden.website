@@ -1,0 +1,117 @@
+body {
+  background: blanchedalmond;
+  font-family: serif;
+}
+
+h1 {
+    color: palevioletred;
+}
+
+section h2 {
+  color: black;
+  font-size: medium;
+  font-weight: 100;
+}
+
+footer section {
+  color: palevioletred;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* stijl voor links die geselcteerd is (maar niet geklikt), met tab-toets */
+a:focus {
+  color: green;
+}
+
+/* standaardstijl voor de link */
+a {
+  color: palevioletred;
+  transition: all 0.7s;
+/* Transition-instellingen:
+   - color: De eigenschap die verandert
+   - 0.7s: Duur van de overgang (0.7 seconden)
+   - ease: Timingfunctie voor een vloeiende overgang
+   - 0.2s: Vertraging voordat de overgang begint */
+}  
+
+a {
+  display: inline-block; /* Zorgt ervoor dat transform werkt */
+  transition: transform 0.7s ease;
+}
+
+a:hover {
+  transform: scale(1.2) rotate(10deg); /* Vergroot en draait de link bij hover */
+}
+
+/* stijl voor de link wanneer je er met de muis eroverheen beweegt */
+a:hover {
+  color: rgb(239, 179, 87);
+  cursor: pointer;
+}
+
+/* stijl voor links op het moment dat ze worden aangeklikt */
+a:active {
+  color: purple;
+}
+
+nav ul li {
+  display: flex;
+  list-style-type: none;
+  margin: 3em;
+  background: white;
+  border: 3px solid palevioletred;
+  padding: 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+footer {
+  padding: 10px;
+  border: 3px solid palevioletred;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 1000px;
+}
+
+main div {
+  display: flex;
+  align-items: center;
+  text-align:center;
+}
+
+nav img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.couture_logo{
+  animation-name: slideIn;
+  animation-duration: 10s;
+}
+
+
+@keyframes slideIn {
+   from{transform: translateX(0);}
+    to{transform: translateX(50px);}
+}
+
+/* Dark modus */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+/* media query kan je verschillende stijlen toeppasen vd eigenschappen van het apparaat
+media-feature= kleuren bijv, media-type= het beeldscherm bijv. */
+/*code van w3schools */
